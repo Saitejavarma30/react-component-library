@@ -1,0 +1,40 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Accordion from "./Accordion.stories.tsx";
+
+<Meta of={Accordion} title="Accordion" />
+
+# Accordion
+
+Accordion component with different props.
+
+#### Example
+
+<Canvas of={Accordion.Primary} />
+
+## Usage
+
+```ts
+import {Accordion} from "sld-ui";
+
+const Example = () => {
+  return (
+      <Accordion
+        size={"small"}
+        text={"Accordion"}
+        onClick={()=> console.log("Clicked")}
+        primary
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **text** _`() => void`_ - A string that represents the text content of the Accordion.
+- **primary** - A boolean indicating whether the Accordion should have a primary styling or not. Typically, a primary Accordion stands out as the main action in a user interface.
+- **disabled** - A boolean indicating whether the Accordion should be disabled or not. When disabled, the Accordion cannot be clicked or interacted with.
+- **size** - A string with one of three possible values: "small," "medium," or "large." It defines the size or dimensions of the Accordion.
+- **onClick** - A function that is called when the Accordion is clicked. It receives a MouseEventHandler for handling the click event on the Accordion element.
